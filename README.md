@@ -13,7 +13,7 @@ This project was created as part of CSC 317 at San Francisco State University. T
 
 ## Live Demo
 
-The website is deployed at: https://climatefacts.netlify.app/
+The website is deployed at: [https://climatefacts.netlify.app/](https://climatefacts.netlify.app/)
 
 ## Features
 
@@ -26,14 +26,16 @@ The website is deployed at: https://climatefacts.netlify.app/
 - **Pseudo-classes/elements**: More than 8 distinct ones used for interactive and visual enhancements
 - **CSS-only Mobile Menu**: Mobile navigation toggle without JavaScript
 - **Smooth Scrolling**: Section navigation with smooth transitions
+- **Animated Hero Background**: Gradient animation with floating particles
 
 ### Design Features
 
 - Clean, modern aesthetic with a color palette inspired by nature
+- Animated gradient background in the hero section that shifts through different shades of blue and green
 - Interactive card components with hover effects
-- Visual impact representation with custom icons
 - Responsive grid layouts for facts and impacts sections
-- First-letter styling for emphasis in key paragraphs
+- Floating effect in the hero background for visual interest
+- Text shadows for improved readability
 
 ## Installation and Development
 
@@ -45,7 +47,7 @@ The website is deployed at: https://climatefacts.netlify.app/
 ## Project Structure
 
 - `index.html` - Main HTML document with all content
-- `styles.css` - All styling including responsive design rules
+- `styles.css` - All styling including responsive design and animations
 - `README.md` - Project documentation
 
 ## Accessibility Features
@@ -65,6 +67,7 @@ The website is deployed at: https://climatefacts.netlify.app/
 - HTML5
 - CSS3
 - Google Fonts
+- CSS Animations
 - Flexbox
 
 ## License
