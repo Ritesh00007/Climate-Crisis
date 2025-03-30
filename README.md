@@ -13,7 +13,7 @@ This project was created as part of CSC 317 at San Francisco State University. T
 
 ## Live Demo
 
-The website is deployed at: [https://climatecrisis0.netlify.app/](https://climatecrisis0.netlify.app/)
+The website is deployed at: https://climatefacts.netlify.app/
 
 ## Features
 
