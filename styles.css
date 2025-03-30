@@ -1,0 +1,611 @@
+/* Base Styles & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #1a535c;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utility Classes */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1a535c;
+    color: white;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #106e78;
+}
+
+.btn-primary {
+    background-color: #4ecdc4;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #4ecdc4;
+    color: #4ecdc4;
+}
+
+.btn-secondary:hover {
+    background-color: #4ecdc4;
+    color: white;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Pseudo-element #1 - Underline effect for section headers */
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: #4ecdc4;
+    bottom: -10px;
+    left: 25%;
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-class #1 - Navbar scroll effect */
+.navbar:hover {
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #1a535c;
+}
+
+.logo span {
+    color: #4ecdc4;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #333;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Pseudo-element #2 - Link underline effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4ecdc4;
+    transition: width 0.3s ease;
+}
+
+/* Pseudo-class #2 - Link hover effect */
+.nav-links a:hover {
+    color: #4ecdc4;
+}
+
+/* Pseudo-class #3 - Link hover underline effect */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* CSS for no-JS mobile menu toggle */
+.nav-toggle {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    height: calc(100vh - 70px);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://source.unsplash.com/random/1600x900/?climate-change') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Facts Section */
+.facts {
+    padding: 5rem 5%;
+    background-color: white;
+}
+
+.facts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.fact-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    flex: 1 1 300px;
+    max-width: 350px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Pseudo-class #4 - Card hover effect */
+.fact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Pseudo-element #3 - Card hover accent */
+.fact-card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #4ecdc4;
+}
+
+.fact-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(78, 205, 196, 0.2);
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fact-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #1a535c;
+}
+
+.fact-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* Impacts Section */
+.impacts {
+    padding: 5rem 5%;
+    background-color: #f5f5f5;
+}
+
+.impacts-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.impact-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    flex: 1 1 200px;
+    max-width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-class #5 - Impact item hover */
+.impact-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.impact-item p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.impact-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+/* Icons for impact items */
+.impact-icon::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.impact-icon.health::before {
+    content: '🏥';
+    font-size: 2rem;
+}
+
+.impact-icon.agriculture::before {
+    content: '🌾';
+    font-size: 2rem;
+}
+
+.impact-icon.biodiversity::before {
+    content: '🦋';
+    font-size: 2rem;
+}
+
+.impact-icon.water::before {
+    content: '💧';
+    font-size: 2rem;
+}
+
+.impact-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Solutions Section */
+.solutions {
+    padding: 5rem 5%;
+    background: linear-gradient(rgba(26, 83, 92, 0.9), rgba(26, 83, 92, 0.9)), url('https://source.unsplash.com/random/1600x900/?renewable-energy') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+.solutions-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.solutions-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.solutions-content p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #1a535c;
+    color: white;
+    padding: 4rem 5% 1rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.footer-logo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.footer-logo span {
+    color: #4ecdc4;
+}
+
+.footer-logo p {
+    max-width: 250px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links h3, .footer-contact h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+/* Pseudo-element #4 - Footer headings accent */
+.footer-links h3::after, .footer-contact h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #4ecdc4;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+/* Pseudo-class #6 - Footer link hover */
+.footer-links a:hover {
+    color: #4ecdc4;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact a {
+    color: #4ecdc4;
+    transition: all 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Pseudo-element #5 - First letter styling */
+.solutions-content p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4ecdc4;
+}
+
+/* Pseudo-class #7 - Active link styling */
+.nav-links a:active {
+    color: #ff6b6b;
+}
+
+/* Pseudo-class #8 - Focus state for buttons */
+.btn:focus {
+    outline: 3px solid rgba(78, 205, 196, 0.5);
+    outline-offset: 2px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+    
+    .nav-toggle {
+        display: none;
+    }
+    
+    .nav-toggle + .burger {
+        display: block;
+        z-index: 1001;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        height: calc(100vh - 70px);
+        width: 70%;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: all 0.5s ease;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        -webkit-transition: all 0.5s ease;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .nav-toggle:checked ~ .nav-links {
+        right: 0;
+    }
+    
+    .nav-toggle:checked + .burger .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+        -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .nav-toggle:checked + .burger .line2 {
+        opacity: 0;
+    }
+    
+    .nav-toggle:checked + .burger .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+        -webkit-transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .nav-links a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .fact-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .impact-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+}
+
+/* Additional pseudo-classes/elements for requirement */
+/* Pseudo-element #7 - Selection styling */
+::selection {
+    background-color: #4ecdc4;
+    color: white;
+}
+
+/* Pseudo-element #8 - Placeholder styling */
+input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Pseudo-class #10 - Focus-within for interactive elements */
+.footer-links:focus-within {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 5px;
+}
